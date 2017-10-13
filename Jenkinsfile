@@ -1,7 +1,7 @@
 pipeline {
     agent {
-        docker {
-            dockerfile 'Dockerfile'
+        dockerfile {
+            filename 'Dockerfile'
             label 'label'
         }
     }
