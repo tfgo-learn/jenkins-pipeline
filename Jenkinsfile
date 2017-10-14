@@ -10,9 +10,11 @@ pipeline {
         stage('build') {
             steps {
                 withEnv(['GOPATH=' + pwd()]){
-					sh 'pwd'
-                    sh 'uname -a'
-                    sh 'dep version'
+					dir('src/github.com/tfgo-learn/jenkins-pipeline') {
+						sh 'pwd'
+                    	sh 'uname -a'
+                    	sh 'dep version'
+					}
                 }
             }
         }
