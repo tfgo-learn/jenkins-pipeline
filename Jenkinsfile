@@ -12,7 +12,7 @@ pipeline {
         stage('build') {
             steps {
                 withEnv(['GOPATH=' + pwd()]){
-					sh "cd ${projPath} && pwd'
+					sh "cd ${projPath} && pwd"
 					sh 'pwd'
                 	sh 'uname -a'
                 	sh 'dep version'
