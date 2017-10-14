@@ -5,7 +5,7 @@ projPath = 'src/github.com/tfgo-learn/jenkins-pipeline'
 pipeline {
     agent {
         dockerfile {
-            filename 'Dockerfile'
+            filename "${projPath}/Dockerfile"
         }
     }
     stages {
